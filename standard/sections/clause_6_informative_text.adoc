@@ -1,3 +1,4 @@
+[obligation=informative]
 == Clauses not Containing Normative Material
 
 Paragraph
