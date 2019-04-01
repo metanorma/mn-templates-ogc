@@ -1,4 +1,4 @@
-= Standard template in AsciiDoc
+= Standard template in Metanorma
 
 == Content
 

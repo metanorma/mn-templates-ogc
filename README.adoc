@@ -1,6 +1,33 @@
-= OGC Templates
+= OGC Metanorma Templates
 
 This GitHub repository contains templates for OGC documents.
 
 Note that the Apache license applies only to the template.
 Once a document has been created, the license must reflect the OGC document license.
+
+This repository is used by the `metanorma new` command to create new documents.
+
+== Document types
+
+These document types (``doctype``s) are supported in this template repository:
+
+* `standard`
+* `abstract-specification`
+* `best-practice`
+* `discussion-paper`
+* `white-paper` (unofficial?)
+* `release-notes` (unofficial?)
+
+These aren't supported yet:
+
+* `profile`
+* `standard-with-suite`
+* `community-standard`
+* `engineering-report`
+* `reference-model`
+* `user-guide`
+* `policy`
+* `guide`
+* `amendment`
+* `technical-corrigendum`
+* `administrative`

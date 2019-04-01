@@ -1,6 +1,6 @@
 [requirement,type="general",id="/req/req-class-a/req-name-1",obligation="shall"]
 ====
 
-Requirement 'shall' statement {set:cellbgcolor:#FFFFFF}
+Requirement 'shall' statement
 
 ====
