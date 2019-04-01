@@ -1,0 +1,12 @@
+.DS_Store
+.swp
+.tmp.xml
+
+# Output files
+document.html
+document.doc
+document.xml
+document.pdf
+
+# Deploy key
+deploy_key

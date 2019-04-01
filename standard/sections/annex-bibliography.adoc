@@ -1,7 +1,6 @@
-[appendix]
-:appendix-caption: Annex
+[bibliography]
 [[Bibliography]]
-= Bibliography
+== Bibliography
 
 [NOTE]
 .Example Bibliography (Delete this note).
@@ -20,6 +19,4 @@ Springer LNCS is widely used in technical and computer science journals and othe
 
 ===============================================
 
-((( Example )))
-[[OGC2015]]
-[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+* [[[OGC2015,OGCTB12]]], _OGC: OGC Testbed 12 Annex B: Architecture_ (2015).
