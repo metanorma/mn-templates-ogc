@@ -18,7 +18,7 @@ requirement description
 ////
 
 
-[requirement,type="class",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a",obligation="shall"]
+[requirement,type="class",id="http://www.opengis.net/spec/ABCD/m.n/req/req-class-a",obligation="requirement"]
 ====
 
 Requirements Class
