@@ -1,0 +1,16 @@
+language: ruby
+os:
+- linux
+- osx
+rvm:
+- 2.5
+before_install:
+- nvm install 8
+- npm install -g puppeteer
+- gem install metanorma-cli
+script:
+- |
+  for template in abstract-specification best-practice discussion-paper release-notes standard white-paper; do
+    metanorma new test/$template --type ogc --doctype $template --template . --overwrite
+    metanorma compile test/$template/document.adoc
+  done

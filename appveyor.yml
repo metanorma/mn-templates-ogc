@@ -1,0 +1,30 @@
+version: '{build}'
+
+environment:
+  matrix:
+    - RUBY_VERSION: 25
+
+install:
+  - ps: . { iwr -useb https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/appveyor.ps1 } | iex
+  - refreshenv
+
+build_script:
+  - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
+  - gem install metanorma-cli
+
+before_test:
+  - ruby -v
+  - gem -v
+
+test_script:
+  - for %%t in (abstract-specification best-practice discussion-paper release-notes standard white-paper) do (
+      metanorma new test\%%t --type ogc --doctype %%t --template . --overwrite &
+      metanorma compile %APPVEYOR_BUILD_FOLDER%\test\%%t\document.adoc
+    )
+
+on_finish:
+  - 7z a %APPVEYOR_BUILD_FOLDER%\result.zip %APPVEYOR_BUILD_FOLDER%\test
+
+artifacts:
+  - path: result.zip
+    name: result.zip
