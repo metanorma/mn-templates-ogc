@@ -1,3 +1,5 @@
+# Auto-generated !!! Do not edit it manually
+# use ci-master https://github.com/metanorma/metanorma-build-scripts
 version: '{build}'
 
 environment:
@@ -7,21 +9,20 @@ environment:
 install:
   - ps: . { iwr -useb https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/appveyor.ps1 } | iex
   - refreshenv
-
-build_script:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - gem install metanorma-cli
+  - FOR /F "tokens=1,2 delims==" %%G IN (doctypes.env) DO (set %%G=%%H)
 
-before_test:
+before_build:
   - ruby -v
   - gem -v
 
-test_script:
-  - for %%t in (abstract-specification best-practice discussion-paper release-notes standard white-paper) do (
-      metanorma new test\%%t --type ogc --doctype %%t --template . --overwrite &
-      metanorma compile %APPVEYOR_BUILD_FOLDER%\test\%%t\document.adoc
+build_script:
+  - for %%t in (%DOCTYPES%) do (
+      metanorma new result\%%t --type %TYPE% --doctype %%t --template . --overwrite &
+      metanorma compile %APPVEYOR_BUILD_FOLDER%\result\%%t\document.adoc
     )
-  - 7z a %APPVEYOR_BUILD_FOLDER%\result.zip %APPVEYOR_BUILD_FOLDER%\test
+  - 7z a %APPVEYOR_BUILD_FOLDER%\result.zip %APPVEYOR_BUILD_FOLDER%\result
 
 artifacts:
   - path: result.zip
