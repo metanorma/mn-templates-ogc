@@ -7,6 +7,8 @@ os:
 rvm:
 - 2.5
 before_install:
+- nvm install 8
+- npm install -g puppeteer
 - gem install metanorma-cli
 script:
 - |
