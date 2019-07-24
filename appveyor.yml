@@ -12,16 +12,27 @@ install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - gem install metanorma-cli
   - FOR /F "tokens=1,2 delims==" %%G IN (doctypes.env) DO (set %%G=%%H)
+  - set DOCTYPES=%DOCTYPES:"=% # https://stackoverflow.com/a/5181182/902217
+  - gem install metanorma-%TYPE%
 
 before_build:
   - ruby -v
   - gem -v
 
 build_script:
-  - for %%t in (%DOCTYPES%) do (
-      metanorma new result\%%t --type %TYPE% --doctype %%t --template . --overwrite &
-      metanorma compile %APPVEYOR_BUILD_FOLDER%\result\%%t\document.adoc
-    )
+  - ps: |
+      $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
+      $docTypes.DOCTYPES.Split(" ") | ForEach {
+        $t = $_.Trim('"')
+        metanorma new result\$t --type $docTypes.TYPE --doctype $t --template . --overwrite
+        if (Test-Path -Path $env:APPVEYOR_BUILD_FOLDER\result\$t\document.adoc) {
+          metanorma compile $env:APPVEYOR_BUILD_FOLDER\result\$t\document.adoc
+        } else {
+          Get-ChildItem "$env:APPVEYOR_BUILD_FOLDER\result\$t" -Filter *.adoc | Foreach-Object {
+            metanorma compile $_.FullName
+          }
+        }
+      }
   - 7z a %APPVEYOR_BUILD_FOLDER%\result.zip %APPVEYOR_BUILD_FOLDER%\result
 
 artifacts:
