@@ -27,6 +27,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
+:edition: 1.0
 
 include::sections/clause-0-preface.adoc[]
 
