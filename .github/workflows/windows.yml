@@ -2,7 +2,7 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: windows
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-windows:
@@ -34,15 +34,17 @@ jobs:
       - name: Metanorma compile
         shell: pwsh
         run: |
+          $ErrorActionPreference = "Stop" <# https://stackoverflow.com/a/16334189/902217 #>
           $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
-          $docTypes.DOCTYPES.Split(" ") | ForEach {
+          $docTypes.DOCTYPES.Split(" ") | % {
             $t = $_.Trim('"')
-            metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite
-            if (Test-Path -Path result\$t\document.adoc) {
-              metanorma compile result\$t\document.adoc
+            & cmd /c "metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite 2>&1"
+            $doc = "result\$t\document.adoc"
+            if (Test-Path -Path $doc) {
+              & cmd /c "metanorma compile $doc 2>&1"
             } else {
-              Get-ChildItem ".\result\$t" -Filter *.adoc | Foreach-Object {
-                metanorma compile $_.FullName
+              Get-ChildItem ".\result\$t" -Filter *.adoc | % {
+                & cmd /c "metanorma compile $_.FullName 2>&1"
               }
             }
           }

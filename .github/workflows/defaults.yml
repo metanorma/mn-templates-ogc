@@ -2,7 +2,7 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: defaults
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   test-nix:
