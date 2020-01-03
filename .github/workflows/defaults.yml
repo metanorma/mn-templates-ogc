@@ -1,0 +1,48 @@
+# Auto-generated !!! Do not edit it manually
+# use ci-master https://github.com/metanorma/metanorma-build-scripts
+name: defaults
+
+on: [push, pull_request]
+
+jobs:
+  test-nix:
+    name: Test on Ruby ${{ matrix.ruby }} *nix
+    strategy:
+      matrix:
+        os: [ macos-latest, ubuntu-latest ]
+        ruby: [ '2.6', '2.5', '2.4' ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          architecture: 'x64'
+      - name: Update gems
+        run: |
+          source doctypes.env
+          gem install metanorma-cli metanorma-$TYPE
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '8'
+      - name: Install Puppeteer
+        run: |
+          npm install -g puppeteer
+      - name: Metanorma compile
+        run: |
+          source doctypes.env
+          for template in $DOCTYPES
+          do
+            metanorma new test/$template --type $TYPE --doctype $template --template .
+            if [ -f test/${template}/document.adoc ]
+            then
+              metanorma compile test/${template}/document.adoc
+            else
+              for docfile in test/${template}/*.adoc
+              do
+                metanorma compile $docfile
+              done
+            fi
+          done

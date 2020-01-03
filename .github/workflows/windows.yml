@@ -1,0 +1,50 @@
+# Auto-generated !!! Do not edit it manually
+# use ci-master https://github.com/metanorma/metanorma-build-scripts
+name: windows
+
+on: [push, pull_request]
+
+jobs:
+  test-windows:
+    name: Test on Ruby ${{ matrix.ruby }} Windows
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        ruby: [ '2.6', '2.5', '2.4' ]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          architecture: 'x64'
+      - name: Update gems
+        shell: pwsh
+        run: |
+          $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
+          gem install metanorma-cli metanorma-$($docTypes.TYPE)
+      - name: Use Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '8'
+      - name: Install Puppeteer
+        shell: pwsh
+        run: |
+          npm install -g puppeteer
+      - name: Metanorma compile
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop" <# https://stackoverflow.com/a/16334189/902217 #>
+          $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
+          $docTypes.DOCTYPES.Split(" ") | % {
+            $t = $_.Trim('"')
+            & cmd /c "metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite 2>&1"
+            $doc = "result\$t\document.adoc"
+            if (Test-Path -Path $doc) {
+              & cmd /c "metanorma compile $doc 2>&1"
+            } else {
+              Get-ChildItem ".\result\$t" -Filter *.adoc | % {
+                & cmd /c "metanorma compile $_.FullName 2>&1"
+              }
+            }
+          }
