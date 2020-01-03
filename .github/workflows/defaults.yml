@@ -2,7 +2,12 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: defaults
 
-on: [push, pull_request]
+on:
+  push:
+    branch: master
+  pull_request:
+    branches:
+    - '**'
 
 jobs:
   test-nix:
@@ -35,7 +40,7 @@ jobs:
           source doctypes.env
           for template in $DOCTYPES
           do
-            metanorma new test/$template --type $TYPE --doctype $template --template .
+            metanorma new test/$template --type $TYPE --doctype $template --template . --overwrite
             if [ -f test/${template}/document.adoc ]
             then
               metanorma compile test/${template}/document.adoc
