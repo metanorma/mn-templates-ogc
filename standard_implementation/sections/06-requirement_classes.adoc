@@ -1,0 +1,65 @@
+
+== Requirements Classes
+
+[NOTE]
+====
+Requirements are encoded using AsciiDoc markup for example blocks, prepended with an role attribute containing the type of the block (i.e. "`requirement`", "`recommendation`", or "`permission`").
+
+For more detailed information about encoding Requeriments, Recommendations, and Permissions visit: https://www.metanorma.com/author/topics/document-format/requirements-recommendations-permissions/
+====
+
+=== Requirement examples
+
+[requirement,type="class",label="Requeriment Label",obligation="requirement",subject="Web API",inherit="Dependency_1;Dependency_2;Dependency_3;Dependency_n"]
+====
+
+[requirement,type="general",label="Requeriment label 1"]
+======
+Description text
+======
+
+[requirement,type="general",label="Requeriment label 2"]
+======
+Description text
+======
+
+[requirement,type="general",label="Requeriment label 3"]
+======
+Description text
+======
+
+====
+
+[requirement,model=ogc,type="class",label="http://www.opengis.net/spec/waterml/2.0/req/xsd-xml-rules[*req/core*]",subject="Encoding of logical models",inherit="urn:iso:dis:iso:19156:clause:7.2.2;urn:iso:dis:iso:19156:clause:8;http://www.opengis.net/doc/IS/GML/3.2/clause/2.4;O&M Abstract model, OGC 10-004r3, clause D.3.4;http://www.opengis.net/spec/SWE/2.0/req/core/core-concepts-used",classification="priority:P0;domain:Hydrology,Groundwater;control-class:Technical",obligation="recommendation,requirement"]
+====
+I recommend this
+====
+
+
+=== Requirement examples
+
+[.requirement,label="requirement label"]
+====
+
+[.requirement]
+======
+Description text
+======
+
+====
+
+
+[.requirement,label="requirement label"]
+====
+
+[.requirement]
+======
+Description text
+======
+
+[.requirement]
+======
+Description text
+======
+
+====
