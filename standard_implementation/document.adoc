@@ -23,6 +23,8 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
+:imagesdir: images
+:stem:
 
 
 // Clauses
