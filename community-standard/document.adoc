@@ -1,0 +1,48 @@
+= OGC document title
+:doctype: community-standard
+:edition: 1.0
+:language: en
+:status: approved
+:committee: technical
+:external-id: http://www.opengis.net/docs/CS/3DTiles/1.0
+:docnumber: 18-053r2
+:received-date: 2018-06-04
+:issued-date: 2018-12-14
+:published-date: 2019-01-31
+:fullname: Editor One
+:fullname_2: Editor Two
+:role: editor
+:docfile: document.adoc
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+:pdf-uri: ./document.pdf
+:xml-uri: ./document.xml
+:doc-uri: ./document.doc
+
+
+// Clauses
+include::sections/00-preface.adoc[]
+include::sections/01-scope.adoc[]
+include::sections/02-conformance.adoc[]
+include::sections/03-references.adoc[]
+include::sections/04-terms_and_definitions.adoc[]
+include::sections/05-conventions.adoc[]
+
+// add clause files as needed
+include::sections/07-other-clauses.adoc[]
+
+////
+Annexes
+(add annex files as needed)
+////
+include::sections/aa-annexA.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/ah-history.adoc[]
+include::sections/az-bibliography.adoc[]
