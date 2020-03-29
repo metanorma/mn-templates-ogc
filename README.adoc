@@ -1,5 +1,8 @@
 = OGC Metanorma Templates
 
+image:https://github.com/metanorma/mn-templates-ogc/workflows/defaults/badge.svg["Build Status", link="https://github.com/metanorma/mn-templates-ogc/actions?query=workflow%3Adefaults"]
+image:https://github.com/metanorma/mn-templates-ogc/workflows/windows/badge.svg["Windows Build Status", link="https://github.com/metanorma/mn-templates-ogc/actions?query=workflow%3Awindows"]
+
 This GitHub repository contains templates for OGC documents.
 
 Note that the Apache license applies only to the template.
