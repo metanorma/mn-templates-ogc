@@ -2,10 +2,6 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-:toc:
-:toclevels: 3
-:numbered:
-:sectanchors:
 :status: draft
 :committee: technical
 :draft: 3.0
