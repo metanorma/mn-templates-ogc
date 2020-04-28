@@ -31,13 +31,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - name: Puppeteer prerequisties
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgbm1
       - name: Install Puppeteer
         run: |
-          npm install -g puppeteer@3.0.0
+          npm install -g puppeteer@3.0.1
       - name: Use Python
         uses: actions/setup-python@v1
         with:
-          python-version: '2.7'
+          python-version: '3.6'
           architecture: 'x64'
       - name: Install xml2rfc
         run: |
