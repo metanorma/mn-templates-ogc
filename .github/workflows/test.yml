@@ -8,13 +8,25 @@ on:
   pull_request:
 
 jobs:
-  test-nix:
-    name: Test on Ruby ${{ matrix.ruby }}
+  test:
+    name: Test ruby-${{ matrix.ruby }} on ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
         ruby: [ '2.6', '2.5', '2.4' ]
+        experimental: [false]
+        include:
+          - ruby: '2.7'
+            os: macos-latest
+            experimental: true
+          - ruby: '2.7'
+            os: ubuntu-latest
+            experimental: true
+          - ruby: '2.7'
+            os: windows-latest
+            experimental: true
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@master
