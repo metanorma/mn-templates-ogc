@@ -1,29 +1,57 @@
-= Implementation Standard for OGC (IS) - Add title text
+= Implementation Standard for OGC (IS); Add title text
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: standard
+:comment: ### Document subtype; optional. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :docsubtype: implementation
-:edition: 1.0
+:comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>.<patch version number>
+:edition: 1.0.0
+:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
 :language: en
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :status: approved
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
-:docnumber: YY-999r9
+:comment: ### Internal reference number; mandatory
+:docnumber: 17-069r3
+:comment: ### Date on which the standard was updated; mandatory
 :received-date: 2019-07-11
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
 :issued-date: 2019-09-09
+:comment: ### Date on which the standard was published; mandatory
 :published-date: 2019-10-14
-:external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-:fullname: Editor One
-:fullname_2: Editor Two
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}", 
+:external-id: http://www.opengis.net/doc/IS/ogcapi-features-1/1.0
+:comment: ### Author one
+:fullname: Clemens Portele
+:comment: ### Author two
+:fullname_2: Panagiotis (Peter) A. Vretanos
+:comment: ### Author three
+:fullname_2:  Charles Heazel
+:comment: ### Role of the authors; mandatory
 :role: editor
-:keywords: keyword one, keyword two, etc
-:submitting-organizations: Organization One; Organization Two; Organization three
+:comment: ### Comma delimited keywords; mandatory
+:keywords: ogcdoc, OGC document, OGC API, ISO, ISO/TC 211, geographic information, Geospatial API, Web Feature Service, WFS, feature, features, property, geographic information, spatial data, spatial things, dataset, distribution, API, OpenAPI, GeoJSON, GML, HTML, schema.org
+:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
+:submitting-organizations: CubeWerx Inc; Heazeltech LLC; Hexagon; interactive instruments GmbH; Ordnance Survey; Planet Labs; US Army Geospatial Center (AGC)
+:comment: ### Name of the AsciiDoc file; mandatory
 :docfile: document.adoc
+:comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
 :mn-output-extensions: xml,html,doc,pdf,rxl
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
+:comment: ### Encode all images in HTML output as inline data-URIs; optional
 :data-uri-image:
+:comment: ### URI to which the PDF version of this standard is published; optional
 :pdf-uri: ./document.pdf
+:comment: ### URI to which the XML version of this standard is published; optional
 :xml-uri: ./document.xml
+:comment: ### URI to which the DOC version of this standard is published; optional
 :doc-uri: ./document.doc
+:comment: ### Directory name used as prefix for the location of image files; optional
 :imagesdir: images
+:comment: ### Enable rendering of AsciiMath, MathML, and LaTeX ("latexmath" needs to be indicated in the code to use LaTeX, or set ":stem: latexmath" to interpret by default); optional
 :stem:
 
 
