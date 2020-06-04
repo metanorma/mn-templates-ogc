@@ -1,29 +1,54 @@
 = OGC (add title text)
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
+:comment: ### Character encoding; optional
 :encoding: utf-8
-:lang: en
+:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
+:language: en
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :status: draft
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
+:comment: ### Iteration of the document draft in X.Y format; optional. If present, reviewer notes will be shown in output (for more information visit https://www.metanorma.com/author/topics/document-format/reviewer-notes/)
 :draft: 3.0
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
-:docnumber: YY-999
-:received-date: 2029-03-30
-:issued-date: 2029-03-30
-:published-date: 2029-03-30
-:fullname: Editor One
-:fullname_2: Editor Two
-:docsubtype: Interface
-:keywords: ogcdoc, OGC document, API, openapi, html
-:submitting-organizations: Organization One; Organization Two;
+:comment: ### Internal reference number; mandatory
+:docnumber: 19-004
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2019-02-05
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: 2019-02-28
+:comment: ### Date on which the standard was published; mandatory
+:published-date: 2019-12-11
+:comment: ### Author one
+:fullname: Kyoung-Sook Kim
+:comment: ### Author two
+:fullname_2: Jiyeong Lee
+:comment: ### Role of the authors; mandatory
+:role: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: ogcdoc, OGC document, OGC, IndoorGML, Indoor space, Outdoor space, Seamless navigation, CityGML
+:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
+:submitting-organizations: National Institute of Advanced Industrial Science and Technology; The University of Seoul; All for Land Inc
+:comment: ### Name of the AsciiDoc file; mandatory
 :docfile: document.adoc
+:comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
 :mn-output-extensions: xml,html,doc,pdf
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
+:comment: ### Encode all images in HTML output as inline data-URIs; optional
 :data-uri-image:
+:comment: ### URI to which the PDF version of this standard is published; optional
 :pdf-uri: ./document.pdf
+:comment: ### URI to which the XML version of this standard is published; optional
 :xml-uri: ./document.xml
+:comment: ### URI to which the DOC version of this standard is published; optional
 :doc-uri: ./document.doc
-:edition: 1.0
+:comment: ### Version number; optional. Dot-delimited, preferably with this structure: <version number>.<minor version number>.<patch version number>
+:edition: 1.0.0
 
 ////
 Make sure to complete each included document
