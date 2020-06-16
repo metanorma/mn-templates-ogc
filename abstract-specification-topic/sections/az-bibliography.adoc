@@ -1,0 +1,27 @@
+
+[appendix]
+== Bibliography
+
+[NOTE]
+.Example Bibliography (Delete this note).
+====
+The TC has approved Springer LNCS as the official document citation type.
+Springer LNCS is widely used in technical and computer science journals and other publications
+For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]
+Actual References:
+[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)
+[n] Web: Author Surname, A.: Title, http://Website-Url
+====
+
+[1] Mahdavi-Amiri, A., Samavati, F. F., Peterson, P., 2015, "Categorization and conversions for indexing methods of discrete global grid systems", _ISPRS International Journal of Geo-Information_, 4(1), pp 320–336. http://dx.doi.org/10.3390/ijgi4010320[DOI:10.3390/ijgi4010320]
+
+[2] Mahdavi-Amiri, A., Alderson, T., & Samavati, F., 2015, "A Survey of Digital Earth Representation and Visualization", _Computers & Graphics_, Elsevier Ltd., pp. 95-117. uri: http://hdl.handle.net/1880/50407[http://hdl.handle.net/1880/50407]
+
+[3] Dictionary of Computing, Forth Edition, Oxford University Press, 1996
+
+[4] Goodchild, M. F., 1992, "Geographical information science", _International Journal of Geographical Information Systems_, 6(1): pp 31–45. http://dx.doi.org/10.1080/02693799208901893[DOI:10.1080/02693799208901893]
+
+[5] Clementini, E., Di Felice, P., van Oosterom, P., 1993. "A small set of formal topological relationships suitable for end-user interaction". _In Abel, David; Ooi, Beng Chin. Advances in Spatial Databases: Third International Symposium, SSD '93 Singapore, June 23–25, 1993 Proceedings. Lecture Notes in Computer Science. 692/1993. Springer_. pp 277–295. http://dx.doi.org/10.1007/3-540-56869-7_16[DOI:10.1007/3-540-56869-7_16].
+
+[6] Clementini, E., Sharma, J., Egenhofer, M. J., 1994, "Modelling topological spatial relations: Strategies for query processing". _Computers & Graphics_ 18 (6), pp 815–822. http://dx.doi.org/10.1016/0097-8493(94)90007-8[DOI:10.1016/0097-8493(94)90007-8].
+
