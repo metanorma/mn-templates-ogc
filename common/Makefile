@@ -43,7 +43,11 @@ HTML := $(patsubst %.xml,%.html,$(XML))
 ifdef METANORMA_DOCKER
   PREFIX_CMD := echo "Running via docker..."; docker run -v "$$(pwd)":/metanorma/ $(METANORMA_DOCKER)
 else
-  PREFIX_CMD := echo "Running locally..."; bundle exec
+  ifdef SKIP_BUNDLE
+    PREFIX_CMD := echo "Running locally...";
+  else
+    PREFIX_CMD := echo "Running locally via bundle ..."; bundle exec
+  endif
 endif
 
 _OUT_FILES := $(foreach FORMAT,$(FORMATS),$(shell echo $(FORMAT) | tr '[:lower:]' '[:upper:]'))
@@ -120,7 +124,9 @@ clean:
 
 bundle:
 ifndef METANORMA_DOCKER
+ifndef SKIP_BUNDLE
 	bundle install --jobs 4 --retry 3
+endif
 endif
 	$(call print_vars)
 

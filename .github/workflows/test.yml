@@ -6,6 +6,8 @@ on:
   push:
     branches: [ master ]
   pull_request:
+  repository_dispatch:
+    types: [ metanorma/metanorma-cli ]
 
 jobs:
   test:
@@ -34,18 +36,28 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          architecture: 'x64'
-      - name: Update gems *nix
-        if: matrix.os != 'windows-latest'
+
+      - name: Install metanorma
+        shell: python
+        env:
+          METANORMA_CLI_BRANCH: ${{ github.event.client_payload.ref }}
         run: |
-          source doctypes.env
-          gem install metanorma-cli metanorma-$TYPE
-      - name: Update gems Windows
-        if: matrix.os == 'windows-latest'
-        shell: pwsh
-        run: |
-          $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
-          gem install metanorma-cli metanorma-$($docTypes.TYPE)
+          import os
+
+          branch = os.environ.get('METANORMA_CLI_BRANCH', '')
+          if branch:
+            # install from github
+            os.system("gem install specific_install")
+            os.system("gem specific_install -l https://github.com/metanorma/metanorma-cli -b {}".format(os.environ.get('METANORMA_CLI_BRANCH')))
+          else:
+            # install from rubygems.org
+            os.system("gem install metanorma-cli")
+
+          # install processor gem
+          with open('doctypes.env') as file:
+            props = dict(line.strip().split('=', 1) for line in file)
+            os.system("gem install metanorma-{}".format(props['TYPE']))
+
       - name: Use Node
         uses: actions/setup-node@v1
         with:

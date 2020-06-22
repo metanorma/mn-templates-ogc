@@ -50,9 +50,12 @@ HTML := $(patsubst %.xml,%.html,$(XML))
 
 ifdef METANORMA_DOCKER
   PREFIX_CMD := echo "Running via docker..." & docker run -v "$$(pwd)":/metanorma/ $(METANORMA_DOCKER)
-
 else
-  PREFIX_CMD := echo "Running locally..." & bundle exec
+  ifdef SKIP_BUNDLE
+    PREFIX_CMD := echo "Running locally..." &
+  else
+    PREFIX_CMD := echo "Running locally via bundle ..." & bundle exec
+  endif
 endif
 
 _OUT_FILES := $(foreach FORMAT,$(FORMATS),$(shell echo $(FORMAT) | tr '[:lower:]' '[:upper:]'))
@@ -82,8 +85,9 @@ documents/%.xml: sources/%.xml | documents
 # Otherwise, build the xml using adoc
 sources/%.xml: | bundle
 	$(eval BUILT_TARGET := $(subst /,\,$(shell yq r metanorma.yml metanorma.source.built_targets[$@])))
-	if "$(BUILT_TARGET)" == "null" ( \
-		$(PREFIX_CMD) metanorma -x xml "$(subst xml,adoc,$@)" \
+	$(eval BUILT_TARGET_EMPTY := $(if $(filter-out $(BUILT_TARGET),null ll ),true,false))
+	if "$(BUILT_TARGET_EMPTY)" == "true" ( \
+		$(PREFIX_CMD) metanorma -x xml "$(subst xml,adoc,$(BUILT_TARGET))" \
 	) else ( \
 		if exist "$(BUILT_TARGET)" ( \
 			if "$(suffix $(BUILT_TARGET))" == ".xml" ( \
@@ -136,7 +140,9 @@ clean:
 
 bundle:
 ifndef METANORMA_DOCKER
+ifndef SKIP_BUNDLE
 	bundle install --jobs 4 --retry 3
+endif
 endif
 	$(call print_vars)
 
