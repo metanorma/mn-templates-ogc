@@ -10,6 +10,7 @@ on:
       - .github/workflows/docker.yml
       - .github/workflows/ubuntu.yml
       - .github/workflows/windows.yml
+      - Makefile.win
 
 jobs:
   test-macos:
@@ -38,10 +39,7 @@ jobs:
           metanorma version
       - name: Setup Fonts
         run: |
-          brew install cabextract gettext
-          brew link --force gettext
-          export RENAME_FONTS=false
-          curl -Ls https://raw.githubusercontent.com/metanorma/vista-fonts-installer/master/vista-fonts-installer.sh | bash
+          metanorma setup --agree-to-terms
       - name: Install bundler
         run: |
           sudo gem install bundler
