@@ -1,8 +1,6 @@
 = OGC (add title text)
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
-:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
-:language: en
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :status: draft
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
