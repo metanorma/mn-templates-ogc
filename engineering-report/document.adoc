@@ -1,8 +1,6 @@
 = Engineering report for OGC (add title text)
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: engineering-report
-:comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
-:language: en
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :status: published
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
@@ -21,8 +19,8 @@
 :fullname: John Doe
 :comment: ### Author two
 :fullname_2: Jane Doe
-:comment: ### Role of the authors; mandatory
-:role: editor
+:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:role_2: editor
 :comment: ### Comma delimited keywords; mandatory
 :keywords: hackaton, application-to-the-cloud, testbed, docker, web service
 :comment: ### Name of the AsciiDoc file; mandatory
