@@ -1,8 +1,6 @@
 = OGC (add title text)
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
-:comment: ### Character encoding; optional
-:encoding: utf-8
 :comment: ### Language of the document; mandatory. Specified in two-letter code: "en" for English, "fr" for French
 :language: en
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
