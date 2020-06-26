@@ -1,4 +1,4 @@
-= OGC (add title text)
+= Discussion paper for OGC (add title text)
 :comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
 :comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
