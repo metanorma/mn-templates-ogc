@@ -40,36 +40,22 @@ jobs:
       - name: Install metanorma
         shell: python
         env:
-          METANORMA_CLI_BRANCH: ${{ github.event.client_payload.ref }}
+          TRIGGER_REPO: ${{ github.event.client_payload.repo }}
+          TRIGGER_REF: ${{ github.event.client_payload.ref }}
         run: |
           import os
 
-          branch = os.environ.get('METANORMA_CLI_BRANCH', '')
-          if branch:
-            # install from github
-            os.system("gem install specific_install")
-            os.system("gem specific_install -l https://github.com/metanorma/metanorma-cli -b {}".format(os.environ.get('METANORMA_CLI_BRANCH')))
-          else:
-            # install from rubygems.org
+          repo = os.environ.get("TRIGGER_REPO")
+          branch = os.environ.get("TRIGGER_REF")
+
+          print("Install {} {}".format(repo, branch))
+
+          if repo != "metanorma/metanorma-cli":
             os.system("gem install metanorma-cli")
 
-          # install processor gem
-          with open('doctypes.env') as file:
-            props = dict(line.strip().split('=', 1) for line in file)
-            os.system("gem install metanorma-{}".format(props['TYPE']))
+          os.system("gem install specific_install")
+          os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
 
-      - name: Use Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - name: Puppeteer prerequisties
-        if: matrix.os == 'ubuntu-latest'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libgbm1
-      - name: Install Puppeteer
-        run: |
-          npm install -g puppeteer@3.0.1
       - name: Use Python
         uses: actions/setup-python@v1
         with:
