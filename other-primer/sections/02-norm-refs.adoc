@@ -1,6 +1,6 @@
 
 [bibliography]
-== Normative and Informative References
+== Normative references
 
 The following are the key normative references for this Primer
 
