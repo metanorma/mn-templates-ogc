@@ -1,0 +1,30 @@
+
+== Terms and Definitions
+
+// You can insert paragraphs as needed in this area
+
+
+// Insert terms and definitions content
+// For example
+=== example term
+
+term used for exemplary purposes
+
+[.source]
+<<rfc2616>>
+
+NOTE: An example note.
+
+[example]
+Here's an example of an example term.
+
+
+=== Abbreviations
+// Insert abbreviated terms content
+// For example
+*CGF*:: Computer Generated Forced
+*DB*:: Database
+*DIS*:: Distributed Interactive Simulation [IEEE std 1278]
+*DBGF*:: Database Generation Facility [IEEE std 1516]
+*IG*:: Image Generator
+
