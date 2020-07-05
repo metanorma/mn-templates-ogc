@@ -1,0 +1,28 @@
+
+[bibliography]
+== Normative and Informative References
+
+The following are the key normative references for this Primer
+
+// Typical reference entries (without auto-fetch)
+// Reference content will display as written
+* [[[ogc-cdb-core-vol1,OGC CDB Core Standard Volume 1]]] Volume 1: OGC CDB Core Standard: Model and Physical Data Store Structure.
+
+* [[[ogc-cdb-core-vol11,OGC CDB Core Standard Volume 11]]] Volume 11: OGC CDB Core Standard Conceptual Model
+
+The following informative references are applicable for this Primer.
+
+* [[[ieee-std-1516,IEEE Std 1516]]] HLA [IEEE Std 1516]: 1516-2010 - IEEE Standard for Modeling and Simulation (M&S) High Level Architecture (HLA) - Framework and Rules
+
+* [[[ieee-std-1278,IEEE Std 1278]]] DIS [IEEE Std 1278]: 1278.1-2012 - IEEE Standard for Distributed Interactive Simulation--Application Protocols
+
+// Automatic reference fetching entries (auto-fetch)
+// To verify the reference lookup syntax for all the supported flavors,
+// visit: https://www.metanorma.com/author/topics/building/reference-lookup/#reference-lookup-syntax
+* [[[rfc2616,RFC 2616]]], Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, *HTTP/1.1*, 1999 http://tools.ietf.org/rfc/rfc2616.txt
+
+* [[[rfc2818,RFC 2818]]], Rescorla, E.: IETF RFC 2818, *HTTP Over TLS*, 2000 http://tools.ietf.org/rfc/rfc2818.txt
+
+* [[[rfc3339,RFC 3339]]], Klyne, G., Newman, C.: IETF RFC 3339, *Date and Time on the Internet: Timestamps*, 2002 http://tools.ietf.org/rfc/rfc3339.txt
+
+* [[[rfc8288,RFC 8288]]], Nottingham, M.: IETF RFC 8288, *Web Linking*, 2017 http://tools.ietf.org/rfc/rfc8288.txt

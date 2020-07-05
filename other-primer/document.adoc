@@ -1,0 +1,67 @@
+= Primer of OGC (add title text)
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:doctype: best-practice
+:comment: ### Document subtype; mandatory for standard and best-practice doctype. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted values
+:docsubtype: general
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:status: published
+:comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
+:committee: technical
+:comment: ### Internal reference number; mandatory
+:docnumber: 15-120r5
+:comment: ### Date on which the standard was updated; mandatory
+:received-date: 2018-03-20
+:comment: ### Date on which the standard was approved by the issuing authority; mandatory
+:issued-date: 2018-08-27
+:comment: ### Date on which the standard was published; mandatory
+:published-date: 2018-12-19
+:comment: ###  Year when the copyright for the document was issued; optional
+:copyright-year: 2018
+:comment: ### Version number; optional. Dot-delimited, preferably with this structure <version number>.<minor version number>
+:edition: 1.1
+:comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
+:external-id: http://www.opengis.net/doc/BP/cdb-core-primer/1.1
+:comment: ### Author one
+:fullname: John Doe
+:comment: ### Author two
+:fullname_2: Jane Doe
+:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:role_2: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: ogcdoc, OGC document, CDB, Common Data Base, simulation, synthetic environment, virtual, primer, data store
+:comment: ### Semicolon-delimited list of the submitting organizations; mandatory
+:submitting-organizations: CAE Inc.;Carl Reed, OGC Individual Member;Envitia, Ltd;Glen Johnson, OGC Individual Member;KaDSci, LLC;Laval University;Open Site Plan;University of Calgary;UK Met Office
+:comment: ### Metanorma flavor; mandatory
+:mn-document-class: ogc
+:comment: ### Desired output formats; mandatory
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:comment: ### Name of the AsciiDoc file; mandatory
+:docfile: document.adoc
+:comment: ### Directory name used as prefix for the location of image files; optional
+:imagesdir: images
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
+:local-cache-only:
+:comment: ### Encode all images in HTML output as inline data-URIs; optional
+:data-uri-image:
+
+// Clauses
+include::sections/00-preface.adoc[]
+include::sections/01-introduction.adoc[]
+include::sections/02-norm-refs.adoc[]
+include::sections/03-terms_and_definitions.adoc[]
+
+// Add clause files as needed
+include::sections/04-other-clauses.adoc[]
+
+////
+Annexes
+Add annex files as needed
+////
+include::sections/aa-annexA.adoc[]
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/ah-revision-history.adoc[]
+include::sections/az-references.adoc[]
