@@ -14,7 +14,7 @@
 :fullname_2: Editor Two
 :docsubtype: Interface
 :keywords: ogcdoc, OGC document, API, openapi, html
-:submitting-organizations: Organization One; Organization Two;
+:submitting-organizations: Organization One; Organization Two
 :docfile: document.adoc
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
