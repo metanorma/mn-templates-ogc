@@ -1,5 +1,6 @@
 
 [appendix]
+[bibliography]
 == Bibliography
 
 // Typical reference entry (without auto-fetch)
