@@ -26,3 +26,5 @@ The following informative references are applicable for this Primer.
 * [[[rfc3339,RFC 3339]]], Klyne, G., Newman, C.: IETF RFC 3339, *Date and Time on the Internet: Timestamps*, 2002 http://tools.ietf.org/rfc/rfc3339.txt
 
 * [[[rfc8288,RFC 8288]]], Nottingham, M.: IETF RFC 8288, *Web Linking*, 2017 http://tools.ietf.org/rfc/rfc8288.txt
+
+* [[[ogc_08-131r3,OGC 08-131r3]]], OGC: OGC 08-131r3: The Specification Model -- A Standard for Modular specifications

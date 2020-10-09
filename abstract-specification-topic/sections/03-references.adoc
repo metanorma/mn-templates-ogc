@@ -18,4 +18,4 @@ References are to follow the Springer LNCS style, with the exception that option
 
 * [[[ogc07036, OGC 07-036]]], OGC: OGC 07-036, _OpenGIS Geography Markup Language (GML) Encoding Standard_. _(identical in normative content to ISO 19136:2007)_, 2007
 
-
+* [[[ogc_08-131r3,OGC 08-131r3]]], OGC: OGC 08-131r3: The Specification Model -- A Standard for Modular specifications

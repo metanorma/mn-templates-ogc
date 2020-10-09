@@ -28,3 +28,5 @@ References are to follow the Springer LNCS style, with the exception that option
 * [[[html5, HTML5]]], W3C: *HTML5*, W3C Recommendation, 2019 http://www.w3.org/TR/html5/
 
 * [[[schema,Schema.org]]], *Schema.org:* http://schema.org/docs/schemas.html
+
+* [[[ogc_08-131r3,OGC 08-131r3]]], OGC: OGC 08-131r3: The Specification Model -- A Standard for Modular specifications

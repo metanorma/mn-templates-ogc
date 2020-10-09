@@ -51,3 +51,5 @@ Foster, I., Kesselman, C., Nick, J., Tuecke, S. Technical report, Global Grid Fo
 * [[[OGC14-005r3,OGC 14-005r3]]], _OGC IndoorGML_ (2014)
 
 * [[[OGC06121r9,OGC 06-121r9]]], _OGC Web Service Common Implementation Specification_, April 7, 2010. http://portal.opengeospatial.org/files/?artifact_id=38867
+
+* [[[ogc_08-131r3,OGC 08-131r3]]], OGC: OGC 08-131r3: The Specification Model -- A Standard for Modular specifications
