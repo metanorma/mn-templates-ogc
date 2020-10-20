@@ -23,7 +23,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           submodules: true
       - name: Setup fonts
         run: |
