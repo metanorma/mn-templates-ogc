@@ -95,13 +95,13 @@ jobs:
           $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
           $docTypes.DOCTYPES.Split(" ") | % {
             $t = $_.Trim('"')
-            & cmd /c "metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite 2>&1"
+            metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite
             $doc = "result\$t\document.adoc"
             if (Test-Path -Path $doc) {
-              & cmd /c "metanorma compile $doc 2>&1"
+              metanorma compile $doc
             } else {
               Get-ChildItem ".\result\$t" -Filter *.adoc | % {
-                & cmd /c "metanorma compile $_.FullName 2>&1"
+                metanorma compile $_.FullName
               }
             }
           }
