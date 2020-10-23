@@ -18,13 +18,11 @@ jobs:
     name: Test on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Checkout submodules
-        shell: bash
-        run: |
-          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-          git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
+          submodules: true
       - name: Cache xml2rfc
         id: cache-xml2rfc
         uses: actions/cache@v1
@@ -41,4 +39,4 @@ jobs:
           gem install bundler
       - name: Metanorma compile
         run: |
-          make -f Makefile.win clean all SHELL=cmd
+          make -f Makefile.win clean all SHELL=cmd SKIP_BUNDLE=true
