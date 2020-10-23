@@ -54,8 +54,9 @@ jobs:
           if repo != "metanorma/metanorma-cli":
             os.system("gem install metanorma-cli")
 
-          os.system("gem install specific_install")
-          os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
+          if branch and repo:
+            os.system("gem install specific_install")
+            os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
 
       - name: Use Python
         uses: actions/setup-python@v1
