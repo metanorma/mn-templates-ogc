@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
         ruby: [ '2.6', '2.5', '2.4' ]
-        experimental: [false]
+        experimental: [ false ]
         include:
           - ruby: '2.7'
             os: macos-latest
