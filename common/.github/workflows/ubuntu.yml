@@ -13,7 +13,6 @@ on:
       - .github/workflows/docker.yml
       - .github/workflows/windows.yml
       - .github/workflows/docker-pres_xml.yml
-      - Makefile.win
 
 jobs:
   test-linux:
@@ -45,6 +44,6 @@ jobs:
 
       - run: gem install relaton-cli
 
-      - run: make clean all publish SKIP_BUNDLE=true
+      - run: metanorma site generate sources
         env:
           JAVA_OPTS: "java.awt.headless=true"

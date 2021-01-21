@@ -13,7 +13,6 @@ on:
       - .github/workflows/ubuntu.yml
       - .github/workflows/windows.yml
       - .github/workflows/docker-pres_xml.yml
-      - Makefile.win
 
 jobs:
   test-macos:
@@ -32,7 +31,7 @@ jobs:
           key: xml2rfc
           restore-key: xml2rfc
 
-      - run: brew install yq metanorma/metanorma/metanorma
+      - run: brew install metanorma/metanorma/metanorma
 
       - name: Use Ruby
         uses: ruby/setup-ruby@v1
@@ -45,4 +44,4 @@ jobs:
         env:
           JAVA_OPTS: "java.awt.headless=true"
         run: |
-          make clean all SKIP_BUNDLE=true
+          metanorma site generate sources
