@@ -30,11 +30,11 @@ jobs:
             metanorma new test/$template --type $TYPE --doctype $template --template . --overwrite
             if [ -f test/${template}/document.adoc ]
             then
-              metanorma compile test/${template}/document.adoc
+              metanorma compile --no-install-fonts test/${template}/document.adoc
             else
               for docfile in test/${template}/*.adoc
               do
-                metanorma compile $docfile
+                metanorma compile --no-install-fonts $docfile
               done
             fi
           done
