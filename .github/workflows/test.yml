@@ -4,10 +4,10 @@ name: test
 
 on:
   push:
-    branches: [ master, main  ]
+    branches: [ master, main ]
   pull_request:
   repository_dispatch:
-    types: [ metanorma/metanorma-cli ]
+    types: [ metanorma/metanorma-* ]
 
 jobs:
   test:
@@ -17,29 +17,22 @@ jobs:
       fail-fast: false
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
-        ruby: [ '2.6', '2.5', '2.4' ]
+        ruby: [ '2.7', '2.6', '2.5', '2.4' ]
         experimental: [ false ]
         include:
-          - ruby: '2.7'
+          - ruby: '3.0'
             os: macos-latest
             experimental: true
-          - ruby: '2.7'
+          - ruby: '3.0'
             os: ubuntu-latest
             experimental: true
-          - ruby: '2.7'
+          - ruby: '3.0'
             os: windows-latest
             experimental: true
 
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@master
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
-
-      - if: matrix.os == 'macos-latest'
-        run: brew install autoconf automake libtool
 
       - name: Install metanorma
         shell: python
@@ -52,14 +45,23 @@ jobs:
           repo = os.environ.get("TRIGGER_REPO")
           branch = os.environ.get("TRIGGER_REF")
 
-          print("Install {} {}".format(repo, branch))
+          with open("Gemfile", "w") as gemfile:
+            lines = [ "# generated Gemfile\n\n", 'source "https://rubygems.org"\n\n' ]
+            if repo != "metanorma/metanorma-cli":
+              lines.append('gem "metanorma-cli"\n')
 
-          if repo != "metanorma/metanorma-cli":
-            os.system("gem install metanorma-cli")
+            if repo:
+              gem_branch = "\n"
+              if  branch:
+                gem_branch = ', branch: "{}"\n'.format(branch)
+              lines.append('gem "{}", github: "{}"{}\n'.format(repo.split("/", 1)[1], repo, gem_branch))
 
-          if branch and repo:
-            os.system("gem install specific_install")
-            os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
+            gemfile.writelines(lines)
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
 
       - uses: actions/setup-python@v1
         with:
@@ -74,14 +76,14 @@ jobs:
           source doctypes.env
           for template in $DOCTYPES
           do
-            metanorma new test/$template --type $TYPE --doctype $template --template . --overwrite
+            bundle exec metanorma new test/$template --type $TYPE --doctype $template --template . --overwrite
             if [ -f test/${template}/document.adoc ]
             then
-              metanorma compile --no-install-fonts test/${template}/document.adoc
+              bundle exec metanorma compile --no-install-fonts test/${template}/document.adoc
             else
               for docfile in test/${template}/*.adoc
               do
-                metanorma compile --no-install-fonts $docfile
+                bundle exec metanorma compile --no-install-fonts $docfile
               done
             fi
           done
@@ -94,13 +96,13 @@ jobs:
           $docTypes = ConvertFrom-StringData (Get-Content ./doctypes.env -Raw)
           $docTypes.DOCTYPES.Split(" ") | % {
             $t = $_.Trim('"')
-            metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite
+            bundle exec metanorma new result\$t --type $($docTypes.TYPE) --doctype $t --template . --overwrite
             $doc = "result\$t\document.adoc"
             if (Test-Path -Path $doc) {
-              metanorma compile --no-install-fonts $doc
+              bundle exec metanorma compile --no-install-fonts $doc
             } else {
               Get-ChildItem ".\result\$t" -Filter *.adoc | % {
-                metanorma compile --no-install-fonts $_.FullName
+                bundle exec metanorma compile --no-install-fonts $_.FullName
               }
             }
           }

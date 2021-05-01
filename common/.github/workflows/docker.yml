@@ -26,14 +26,15 @@ jobs:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           submodules: true
 
-      - name: instal gems from local Gemfile
-        run: curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+      - uses: actions/cache@v2
+        with:
+          path: /config/fonts
+          key: fontist-docker
+          restore-keys: fontist-docker
 
-      - run: metanorma site generate sources
-        env:
-          LC_ALL: C.UTF-8
-          LANG: C.UTF-8
-          LANGUAGE: C.UTF-8
+      - run: curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+
+      - run: metanorma site generate --agree-to-terms
 
       - uses: actions/upload-artifact@master
         with:
