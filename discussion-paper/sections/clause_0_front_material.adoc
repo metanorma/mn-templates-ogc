@@ -32,3 +32,13 @@ Attention is drawn to the possibility that some of the elements of this document
 
 <Insert Abstract Text here>
 
+== Submitters
+
+All questions regarding this submission should be directed to the editors or the submitters:
+
+|===
+|*Name* |*Affiliation*
+
+|Person Name |Person Affiliation
+
+|===

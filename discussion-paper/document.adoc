@@ -43,8 +43,6 @@
 :xml-uri: ./document.xml
 :comment: ### URI to which the DOC version of this standard is published; optional
 :doc-uri: ./document.doc
-:comment: ### Version number; optional. Dot-delimited, preferably with this structure: <version number>.<minor version number>.<patch version number>
-:edition: 1.0.0
 
 ////
 Make sure to complete each included document
