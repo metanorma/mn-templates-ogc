@@ -17,18 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         os: [ macos-latest, ubuntu-latest, windows-latest ]
-        ruby: [ '2.7', '2.6', '2.5', '2.4' ]
+        ruby: [ '3.0', '2.7', '2.6', '2.5', '2.4' ]
         experimental: [ false ]
-        include:
-          - ruby: '3.0'
-            os: macos-latest
-            experimental: true
-          - ruby: '3.0'
-            os: ubuntu-latest
-            experimental: true
-          - ruby: '3.0'
-            os: windows-latest
-            experimental: true
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -57,6 +47,10 @@ jobs:
               lines.append('gem "{}", github: "{}"{}\n'.format(repo.split("/", 1)[1], repo, gem_branch))
 
             gemfile.writelines(lines)
+
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
+        with:
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
       - uses: ruby/setup-ruby@v1
         with:
