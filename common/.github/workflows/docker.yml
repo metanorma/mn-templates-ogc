@@ -9,10 +9,7 @@ on:
     paths-ignore:
       - .gitlab-ci.yml
       - .github/workflows/test.yml
-      - .github/workflows/macos.yml
-      - .github/workflows/ubuntu.yml
-      - .github/workflows/windows.yml
-      - .github/workflows/docker-pres_xml.yml
+      - .github/workflows/generate.yml
   repository_dispatch:
     types: [ metanorma/metanorma-docker ]
 
@@ -32,9 +29,22 @@ jobs:
           key: fontist-docker
           restore-keys: fontist-docker
 
-      - run: curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+      - uses: actions/cache@v2
+        with:
+          path: ~/.metanorma-ietf-workgroup-cache.json
+          key: metanorma-ietf-workgroup-cache
+          restore-keys: metanorma-ietf-workgroup-cache
 
-      - run: metanorma site generate --agree-to-terms
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
+        with:
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
+
+      - run: |
+          curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+
+      - uses: actions-mn/cli/site-gen@main
+        with:
+          agree-to-terms: true
 
       - uses: actions/upload-artifact@master
         with:
@@ -54,7 +64,7 @@ jobs:
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.GH_DEPLOY_KEY }}
+          github_token: ${{ github.token }}
           publish_dir: ./site
           force_orphan: true
           user_name: ${{ github.actor }}
@@ -63,5 +73,5 @@ jobs:
 
       - uses: kolpav/purge-artifacts-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           expire-in: 0
