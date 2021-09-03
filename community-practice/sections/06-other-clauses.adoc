@@ -1,0 +1,33 @@
+== Other clauses
+
+// Insert clause content here
+Clause content.
+
+[NOTE]
+====
+Add any other clauses as needed.
+====
+
+=== Requirements
+
+[[req_1]]
+[requirement,type=general,label=https://opengeospatial.org/bp/datacubes/Req01]
+.Requirement encoded using definition list syntax
+====
+A Geospatial Data Cube shall use the Geographic Coverage model as defined in OGC Coverage Implementation Schema (CIS).
+====
+
+
+[[req_2]]
+[requirement]
+.Requirement encoded using attribute list syntax
+====
+[%metadata]
+model:: ogc
+type:: general
+label:: https://opengeospatial.org/bp/datacubes/Req02
+
+A Geospatial Coverage Data Cube Service shall host geospatial data cubes and support services on the data when requested.
+====
+
+

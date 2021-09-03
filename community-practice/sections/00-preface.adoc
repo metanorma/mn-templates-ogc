@@ -1,0 +1,54 @@
+
+////
+Preface sections must include [.preface] attribute
+in order to get them placed in the preface area (and not in the main content).
+
+Keywords specified in document preamble should display in this area
+////
+
+.Preface
+
+// Insert preface content
+Preface content.
+
+[NOTE]
+====
+Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work.
+
+There are two ways to specify the Preface: "simple clause" or "full clasuse"
+
+If the Preface does not contain subclauses, it is considered a simple preface clause. This one is entered as text after the `.Preface` label and must be placed between the AsciiDoc document attributes and the first AsciiDoc section title. It should not be give a section title of its own.
+
+If the Preface contains subclauses, it needs to be encoded as a full preface clause. This one is recognized as a full Metanorma AsciiDoc section with te title "Preface", i.e. `== Preface`. (Simple preface content can also be encoded like full preface.) 
+====
+
+
+[abstract]
+== Abstract
+
+// Insert abstract content
+Abstract content.
+
+[NOTE]
+====
+The abstract is recognized as the first clause with an `abstract` style attribute.
+====
+
+
+[.preface]
+== Submitters
+
+All questions regarding this submission should be directed to the editor or the submitters:
+
+[cols="2",options="header,unnumbered"]
+|===
+| Name          | Affiliation
+| Person Name   | Person Affiliation
+|===
+
+[NOTE]
+====
+"Submitters" are entered using a table, contained in a section with the title `Submitters`. Such table must include `%unnumbered` style attribute in order to remove unwanted numbering tag.
+====
+
+

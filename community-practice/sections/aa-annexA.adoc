@@ -1,0 +1,63 @@
+
+
+[appendix,obligation="normative"]
+== Annex Title
+
+// Insert annex content here
+
+Annex content.
+
+[NOTE]
+====
+Place annex material in sequential order and set `obligation` attribute as "normative" (default) or "informative" according to the case.
+====
+
+// === Conformance class: Core Geospatial Data Cube
+
+// Implementations claiming Core Conformance shall be conformant with the requirements listed in this clause.
+
+// Compliance of the data cube to OGC Web Service Standards shall be certified using the OGC Compliance Test suite. http://www.opengeospatial.org/compliance/getCertified
+
+// <<req_1>>
+
+// <<req_2>>
+
+// <<req_3>>
+
+// <<req_4>>
+
+// <<req_5>>
+
+// <<req_6>>
+
+// <<req_7>>
+
+// <<req_8>>
+
+// <<req_9>>
+
+// <<req_10>>
+
+// <<req_11>>
+
+
+// === Conformance class: Analytics Extension
+
+// Implementations claiming Analytics Extension Conformance shall be conformant with
+// the requirements listed in the Core Conformance and in this clause.
+
+// Compliance of the data cube to OGC Web Service Standards shall be certified using the
+// OGC Compliance Test suite. http://www.opengeospatial.org/compliance/getCertified
+
+// <<req_12>>
+
+
+// === Conformance class: Visualization Extension
+
+// Implementations claiming Visualization Extension Conformance shall be conformant
+// with the requirements listed in the Core Conformance and in this clause.
+
+// Compliance of the data cube to OGC Web Service Standards shall be certified using the
+// OGC Compliance Test suite. http://www.opengeospatial.org/compliance/getCertified
+
+// <<req_13>>
