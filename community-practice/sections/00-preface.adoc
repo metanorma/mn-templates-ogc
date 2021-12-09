@@ -6,7 +6,7 @@ in order to get them placed in the preface area (and not in the main content).
 Keywords specified in document preamble should display in this area
 ////
 
-.Preface
+== Preface
 
 // Insert preface content
 Preface content.
