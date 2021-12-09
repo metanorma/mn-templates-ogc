@@ -1,6 +1,6 @@
 
 
-== Terms and Definitions
+== Terms and definitions
 
 
 === example term
