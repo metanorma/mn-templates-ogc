@@ -29,8 +29,6 @@
 :keywords: ogcdoc, OGC document, API, openapi, html
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: Organization one; Organization two; Organization three
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory

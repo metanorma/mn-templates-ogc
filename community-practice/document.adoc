@@ -23,8 +23,6 @@
 :editor: George Percivall
 :comment: ### Comma delimited keywords; mandatory
 :keywords: keyword_1, keyword_2, keyword_3, etc.
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
