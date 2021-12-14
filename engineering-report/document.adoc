@@ -23,8 +23,6 @@
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
 :keywords: hackaton, application-to-the-cloud, testbed, docker, web service
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory

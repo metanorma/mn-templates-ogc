@@ -29,8 +29,6 @@
 :keywords: ogcdoc, OGC document, Discrete Global Grid System, DGGS, Digital Earth, DGGScore, Spatial Reference System, Global Data Structure, Geographic Information Systems, DE-9IM, standard, specification
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: Geoscience Australia; Landcare Research New Zealand; University of Calgary; PYXIS; SpaceCurve; Zhengzhou Institute of Surveying & Mapping; ESRI
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf,rxl

@@ -28,8 +28,6 @@
 :mn-document-class: ogc
 :comment: ### Directory name used as prefix for the location of image files; optional
 :imagesdir: images
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Desired output formats; mandatory
 :mn-output-extensions: xml,html,doc,pdf,rxl
 :comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching

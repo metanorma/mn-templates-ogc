@@ -27,8 +27,6 @@
 :keywords: ogcdoc, OGC document, OGC, IndoorGML, Indoor space, Outdoor space, Seamless navigation, CityGML
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: National Institute of Advanced Industrial Science and Technology; The University of Seoul; All for Land Inc
-:comment: ### Name of the AsciiDoc file; mandatory
-:docfile: document.adoc
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
