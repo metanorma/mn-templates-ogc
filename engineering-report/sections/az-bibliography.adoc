@@ -10,7 +10,7 @@
 
 // Automatic reference fetching (auto-fetch)
 // To verify the reference lookup syntax for all the supported flavors,
-// visit: https://www.metanorma.com/author/topics/building/reference-lookup/#reference-lookup-syntax
+// visit: https://www.metanorma.org/author/topics/building/reference-lookup/#reference-lookup-syntax
 * [[[ogc14-083r2,OGC 14-083r2]]], OGC: OGC 14-083r2: Moving Features Encoding Part I: XML Core, 2015
 
 // Disabling auto-fetch

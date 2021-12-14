@@ -1,7 +1,7 @@
 = Policy for OGC (add title text)
-:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: policy
-:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :status: published
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: Technical Committee
@@ -30,7 +30,7 @@
 :imagesdir: images
 :comment: ### Desired output formats; mandatory
 :mn-output-extensions: xml,html,doc,pdf,rxl
-:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
 :comment: ### Encode all images in HTML output as inline data-URIs; optional
 :data-uri-image:
