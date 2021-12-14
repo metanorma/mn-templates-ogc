@@ -5,7 +5,7 @@
 ====
 Requirements are encoded using AsciiDoc markup for example blocks, prepended with an role attribute containing the type of the block (i.e. "`requirement`", "`recommendation`", or "`permission`").
 
-For more detailed information about encoding Requeriments, Recommendations, and Permissions visit: https://www.metanorma.com/author/topics/document-format/requirements-recommendations-permissions/
+For more detailed information about encoding Requeriments, Recommendations, and Permissions visit: https://www.metanorma.org/author/topics/document-format/requirements-recommendations-permissions/
 ====
 
 === Requirement examples

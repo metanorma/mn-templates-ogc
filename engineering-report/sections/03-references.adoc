@@ -26,7 +26,7 @@ References are to follow the Springer LNCS style, with the exception that option
 
 // Automatic reference fetching entries (auto-fetch)
 // To verify the reference lookup syntax for all the supported flavors,
-// visit: https://www.metanorma.com/author/topics/building/reference-lookup/#reference-lookup-syntax
+// visit: https://www.metanorma.org/author/topics/building/reference-lookup/#reference-lookup-syntax
 * [[[rfc2616,RFC 2616]]], Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, *HTTP/1.1*, 1999 http://tools.ietf.org/rfc/rfc2616.txt
 
 * [[[rfc2818,RFC 2818]]], Rescorla, E.: IETF RFC 2818, *HTTP Over TLS*, 2000 http://tools.ietf.org/rfc/rfc2818.txt

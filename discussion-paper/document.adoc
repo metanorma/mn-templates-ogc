@@ -1,11 +1,11 @@
 = Discussion paper for OGC (add title text)
-:comment: ### Document type; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:comment: ### Document type; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :doctype: discussion-paper
-:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.com/author/ogc/authoring/ for permitted types
+:comment: ### Document status/stage; mandatory. Visit: https://www.metanorma.org/author/ogc/authoring/ for permitted types
 :status: draft
 :comment: ### Relevant committee; mandatory. The permitted types are: technical, planning, and strategic-member-advisory
 :committee: technical
-:comment: ### Iteration of the document draft in X.Y format; optional. If present, reviewer notes will be shown in output (for more information visit https://www.metanorma.com/author/topics/document-format/reviewer-notes/)
+:comment: ### Iteration of the document draft in X.Y format; optional. If present, reviewer notes will be shown in output (for more information visit https://www.metanorma.org/author/topics/document-format/reviewer-notes/)
 :draft: 3.0
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}"
 :external-id: http://www.opengis.net/doc/{doc-type}/{standard}/{m.n}
@@ -31,7 +31,7 @@
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory
 :mn-output-extensions: xml,html,doc,pdf
-:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.com/author/ref/document-attributes/#caches, https://www.metanorma.com/author/topics/building/reference-lookup/#lookup-result-caching
+:comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
 :comment: ### Encode all images in HTML output as inline data-URIs; optional
 :data-uri-image:
