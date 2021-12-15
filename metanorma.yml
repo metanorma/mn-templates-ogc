@@ -19,5 +19,5 @@ metanorma:
       - white-paper/document.adoc
 
   collection:
-    organization: "Metanorma : Standards for standards"
-    name: "OGC template documents in Metanorma (Metanorma AsciiDoc syntax)"
+    organization: "OGC: The Open Geospatial Consortium"
+    name: "OGC deliverable templates in Metanorma AsciiDoc"
