@@ -36,8 +36,6 @@ jobs:
         with:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
-      - uses: actions-mn/setup@master
-
       - uses: actions-mn/cli/site-gen@main
         with:
           agree-to-terms: true
