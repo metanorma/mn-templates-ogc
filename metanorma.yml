@@ -1,0 +1,23 @@
+---
+metanorma:
+  source:
+    files:
+      - abstract-specification-topic/document.adoc
+      - best-practice/document.adoc
+      - community-practice/document.adoc
+      - community-standard/document.adoc
+      - discussion-paper/document.adoc
+      - engineering-report/document.adoc
+      - other-primer/document.adoc
+      - policy/document.adoc
+      - reference-model/document.adoc
+      - release-notes/document.adoc
+      - standard/document.adoc
+      - standard_implementation/document.adoc
+      - test-suite/document.adoc
+      - user-guide/document.adoc
+      - white-paper/document.adoc
+
+  collection:
+    organization: "Metanorma : Standards for standards"
+    name: "OGC template documents in Metanorma (Metanorma AsciiDoc syntax)"
