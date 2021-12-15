@@ -33,7 +33,9 @@ jobs:
           key: metanorma-ietf-workgroup-cache
           restore-keys: metanorma-ietf-workgroup-cache
 
-      - uses: actions-mn/setup@master
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
+        with:
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
       - name: Test individual templates
         shell: bash
