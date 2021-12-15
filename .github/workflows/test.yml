@@ -39,13 +39,15 @@ jobs:
       - if: matrix.os == 'windows-latest'
         run: rm Gemfile
 
-      - uses: actions-mn/setup@master
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
 
-      # - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
-      #   with:
-      #     token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
+        with:
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
-      - name: Test individual templates (${{ runner.os }})
+      - name: Test individual templates (macos/ubuntu)
         if: matrix.os != 'windows-latest'
         run: |
           source doctypes.env
@@ -63,7 +65,7 @@ jobs:
             fi
           done
 
-      - name: Test individual templates (${{ runner.os }})
+      - name: Test individual templates (windows)
         if: matrix.os == 'windows-latest'
         shell: pwsh
         run: |

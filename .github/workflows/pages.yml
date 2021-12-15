@@ -11,7 +11,7 @@ on:
     types: [ metanorma/metanorma-docker ]
 
 jobs:
-  generate-site:
+  build:
     runs-on: ubuntu-latest
     container: docker://metanorma/mn
     steps:
