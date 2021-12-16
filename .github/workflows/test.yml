@@ -36,9 +36,6 @@ jobs:
           key: metanorma-ietf-workgroup-cache
           restore-keys: metanorma-ietf-workgroup-cache
 
-      - if: matrix.os == 'windows-latest'
-        run: rm Gemfile
-
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
