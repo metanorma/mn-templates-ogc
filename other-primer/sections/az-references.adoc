@@ -2,7 +2,7 @@
 [[annex-references]]
 [appendix,obligation="informative"]
 [bibliography]
-== References
+== Bibliography
 
 // Typical reference entry (without auto-fetch)
 // Reference content will display as written

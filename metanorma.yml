@@ -8,7 +8,7 @@ metanorma:
       - community-standard/document.adoc
       - discussion-paper/document.adoc
       - engineering-report/document.adoc
-      # - other-primer/document.adoc
+      - other-primer/document.adoc
       - policy/document.adoc
       - reference-model/document.adoc
       - release-notes/document.adoc
