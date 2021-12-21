@@ -1,0 +1,79 @@
+{
+	"include": [
+		{
+			"type": "ogc",
+			"doctype": "abstract-specification-topic",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "best-practice",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "community-practice",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "community-standard",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "discussion-paper",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "engineering-report",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "policy",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "reference-model",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "release-notes",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "standard",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "standard_implementation",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "test-suite",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "user-guide",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "white-paper",
+			"experimental": false
+		},
+		{
+			"type": "ogc",
+			"doctype": "other-primer",
+			"experimental": true
+		}
+	]
+}
