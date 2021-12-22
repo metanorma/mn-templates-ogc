@@ -33,8 +33,6 @@
 :mn-output-extensions: xml,html,doc,pdf
 :comment: ### Enable local relaton cache for quick inclusion of prefetched references; optional. For further information, visit: https://www.metanorma.org/author/ref/document-attributes/#caches, https://www.metanorma.org/author/topics/building/reference-lookup/#lookup-result-caching
 :local-cache-only:
-:comment: ### Encode all images in HTML output as inline data-URIs; optional
-:data-uri-image:
 :comment: ### Directory name used as prefix for the location of image files; optional
 :imagesdir: images
 :comment: ### URI to which the PDF version of this standard is published; optional
