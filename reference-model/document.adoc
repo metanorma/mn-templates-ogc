@@ -25,7 +25,7 @@
 :fullname: John Doe
 :comment: ### Author two
 :fullname_2: Jane Doe
-:comment: ### Role of the authors; optional. Supply only if correspoding author is an editor
+:comment: ### Role of the authors; optional. Supply only if corresponding author is an editor
 :role_2: editor
 :comment: ### Comma delimited keywords; mandatory
 :keywords: keyword_1, keyword_2, keyword_3, etc
