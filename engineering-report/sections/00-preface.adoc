@@ -84,7 +84,7 @@ All questions regarding this submission should be directed to the editor or the 
 |Steve Liang | University of Calgary, Canada / SensorUp Inc. | Yes
 |===
 
-[.preface]
+[.preface,type=executivesummary]
 == Executive Summary
 
 // Insert summary content including subsections as needed
