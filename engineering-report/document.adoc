@@ -37,7 +37,7 @@
 include::sections/00-preface.adoc[]
 include::sections/01-introduction.adoc[]
 include::sections/02-terms_and_definitions.adoc[]
-include::sections/03-references.adoc[]
+// NO normative references
 
 // Add clause files as needed
 include::sections/04-other-clauses.adoc[]
@@ -47,6 +47,7 @@ Annexes
 Add annex files as needed
 ////
 include::sections/aa-annexA.adoc[]
+include::sections/ab-annexA.adoc[]
 
 ////
 Revision History should be the last annex before the Bibliography

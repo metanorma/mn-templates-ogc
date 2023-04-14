@@ -73,7 +73,8 @@ NOTE: The security measures discussed in the following sections only provide var
 Submitting organisations added automatically by Metanorma from document attributes
 ////
 
-== Submitters
+[.preface]
+== Contributors
 All questions regarding this submission should be directed to the editor or the submitters:
 
 
@@ -83,18 +84,8 @@ All questions regarding this submission should be directed to the editor or the 
 |Steve Liang | University of Calgary, Canada / SensorUp Inc. | Yes
 |===
 
-
 [.preface]
-== Contributors
-
-//This clause is optional.
-
-Additional contributors to this Standard include the following:
-
-Individual name(s), Organization
-
-[.preface]
-== Summary
+== Executive Summary
 
 // Insert summary content including subsections as needed
 Summary content.

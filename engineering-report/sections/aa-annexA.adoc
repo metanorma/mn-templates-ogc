@@ -1,15 +1,18 @@
 
-// If obligation is not specified, "normative" is taken by default
 [appendix,obligation="normative"]
 [[annex-reference]]
-== Annex Title
+== Abbreviations/Acronyms
+
+// needed to indicate that this is both an annex and a listing of abbreviations;
+// the extra heading will not be rendered in output
+
+[heading=Abbreviated Terms]
+=== {blank}
 
 // Insert annex content here
 
-Annex content.
+Abbreviation:: Explanation
+Abbreviation:: Explanation
+Abbreviation:: Explanation
 
-[NOTE]
-====
-Place annex material in sequential order and set `obligation` attribute as "normative" (default) or "informative" according to the case.
-====
 
