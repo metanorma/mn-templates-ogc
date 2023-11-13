@@ -27,6 +27,8 @@
 :fullanme_3: Gabby Getz
 :comment: ### Role of the authors; mandatory
 :role: editor
+:comment: ### Comma delimited keywords; mandatory
+:keywords: keyword_1, keyword_2, keyword_3, etc.
 :comment: ### Metanorma flavor; mandatory
 :mn-document-class: ogc
 :comment: ### Desired output formats; mandatory

@@ -22,6 +22,8 @@
 :docnumber: 00-027
 :comment: ### External link referencing the document; optional. If not provided, a default value is created following this structure: "http://www.opengis.net/doc/{abbrevation of doctype}/{abbrev}/{version}",
 :external-id:
+:comment: ### Comma delimited keywords; mandatory
+:keywords: keyword_1, keyword_2, keyword_3, etc.
 :comment: ### Semicolon-delimited list of the submitting organizations; mandatory
 :submitting-organizations: Geodan Holding bv, the Netherlands
 :comment: ### Metanorma flavor; mandatory
