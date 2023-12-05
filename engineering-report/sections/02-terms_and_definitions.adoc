@@ -1,6 +1,12 @@
 
 == Terms and definitions
 
+////
+Note that the initial notice about terms ("This document uses the terms defined in OGC Policy Directive 49...")
+is inserted automatically by Metanorma using the agreed standardised language, and you should not enter it here.
+////
+
+
 // Insert terms and definitions content
 // For example
 === example term
