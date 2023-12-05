@@ -1,4 +1,6 @@
 = OGC (add title text)
+:comment: Change "standard" to "draft-standard" for draft standards
+:comment: The front page notice will update automatically to reflect the document type
 :doctype: standard
 :encoding: utf-8
 :lang: en
