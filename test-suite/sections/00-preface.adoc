@@ -73,6 +73,7 @@ NOTE: The security measures discussed in the following sections only provide var
 Submitting organisations added automatically by Metanorma from document attributes
 ////
 
+[.preface]
 == Submitters
 All questions regarding this submission should be directed to the editor or the submitters:
 
