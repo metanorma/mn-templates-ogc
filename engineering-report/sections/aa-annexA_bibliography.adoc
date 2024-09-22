@@ -1,8 +1,8 @@
-
-[appendix,obligation=informative]
-[[annex-bibliography]]
+[[bibliography]]
 [bibliography]
 == Bibliography
+
+// Will be rendered automatically before annexes
 
 // Typical reference entry (without auto-fetch)
 // Reference content will display as written
