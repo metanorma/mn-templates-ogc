@@ -1,0 +1,6 @@
+[recommendation,type="general",id="/rec/rec-class-a/rec-name-1",obligation="recommendation"]
+====
+
+Recommendation 'should' statement
+
+====

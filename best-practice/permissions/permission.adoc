@@ -1,0 +1,6 @@
+[permission,type="general",id="/per/per-class-a/per-name-1",obligation="permission"]
+====
+
+Permission 'may' statement
+
+====

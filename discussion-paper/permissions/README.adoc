@@ -1,0 +1,15 @@
+This folder contains permissions description.
+
+Each file is a single permission. The naming convention for these files is:
+
+"PERn.adoc" where "n" corresponds to the permission number. Numbers should have preceding zeros appropriate for the total number of permissions in the project (e.g., the first permission could be PER001 if less than 1000 permissions are anticipated).
+
+The permission files are integrated into the main document as links.
+
+The permission is expressed according to this pattern:
+
+NOTE: for each permission, there should be a corresponding Abstract Test in the "abstract_tests" folder.
+
+NOTE: sample code may reference one or more permissions and should state which permissions are included in the code by adding the following line to the Extended Description:
+
+"#PERS: pernum1,pernum2,...pernumn"

@@ -1,0 +1,15 @@
+This folder contains recommendations description.
+
+Each file is a single recommendation. The naming convention for these files is:
+
+"RECn.adoc" where "n" corresponds to the recommendation number. Numbers should have preceding zeros appropriate for the total number of recommendations in the project (e.g., the first recommendation could be REC001 if less than 1000 recommendations are anticipated).
+
+The recommendation files are integrated into the main document as links.
+
+The recommendation is expressed according to this pattern:
+
+NOTE: for each recommendation, there should be a corresponding Abstract Test in the "abstract_tests" folder.
+
+NOTE: sample code may reference one or more recommendations and should state which recommendations are included in the code by adding the following line to the Extended Description:
+
+"#RECS: recnum1,recnum2,...recnumn"
